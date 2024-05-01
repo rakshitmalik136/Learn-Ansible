@@ -43,3 +43,32 @@ In Ansible we have:-
 3) ping module --> checks the ability of ansible to log in and that a usable py is configured.
 4) `ansible-user module -create delete/modify`
 
+**Creating a user all on all servers via ansible**
+`ansible all -m user -a "name = user-name state = present"`
+
+**Installing a package on all servers via ansible**
+# ansible-yum-install/update/remove
+# yum-state-present/absent/latest
+
+**To install/update/delete package on all servers**
+1) `ansible all -m yum -a "name = package_name state = present"`
+2) `ansible all -m yum -a "name = package_name state = latest"`
+3) `ansible all -m yum -a "name = package_name state = absent"`
+
+**Copy a file using ansible on all servers**
+# Copy Module
+# src --> which file do you want to copy (local server)
+# dest --> where will the file will go on the remote server?
+`ansible all -m copy -a "src = root/folder_name/file_name dest = destination_path"`
+
+# You can run ansible modules as direct commands
+`-m` --> module name
+`-a` --> argument
+
+# run an ansible module from the command line
+`ansible all -m ping` --> to check if servers are live
+`ansible alll -m user -a "name = user_name state = present"` --> it will run ansible module from CLI.
+
+These all commands can also be considered as ad-hoc commands
+**Ad-hoc commands in Ansible** are commands that can be run individually to perform quick tasks or one-time actions on remote machines.
+**syntax:-** `ansible [pattern] -m [module] -a "[module options]"`
