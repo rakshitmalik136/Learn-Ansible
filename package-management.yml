@@ -1,0 +1,8 @@
+---
+- name: Managing packages
+  hosts: all
+  tasks:
+    -  name: Ensure the httpd package is installed
+       yum: 
+         name: httpd 
+         state: present
