@@ -27,16 +27,14 @@ There are three types of files:-
 -> `/etc/ansible/ansible.cfg`
 
 **After installation of Ansible:**
-Inventory File ---- hosts
-`cd/etc/ansible` --> used to change the directory to where ansible is located..
-`vim hosts` --> used to open hosts file in vim text editor..
-`#add the host name and there branches...`
-#for example:
-
-1) `:wq!` --> used to exit from text editor..
-2) `ansible all --list-hosts` --> used to list all the hosts present in hosts file..
-3) `ansible ungrouped --list-hosts` --> used to show ungrouped host present in hosts file..
-4) `ansible -inventory --graph` --> used show all the hosts with their branches present in the host file..
+1) Inventory File ---- hosts
+2) `cd/etc/ansible` --> used to change the directory to where ansible is located..
+3) `vim hosts` --> used to open hosts file in vim text editor..
+4) `#add the host name and there branches...`
+5) `:wq!` --> used to exit from text editor..
+6) `ansible all --list-hosts` --> used to list all the hosts present in hosts file..
+7) `ansible ungrouped --list-hosts` --> used to show ungrouped host present in hosts file..
+8) `ansible -inventory --graph` --> used show all the hosts with their branches present in the host file..
 
 In Ansible we have:-
 1) Modulus - python language
