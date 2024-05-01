@@ -32,7 +32,14 @@ Inventory File ---- hosts
 `#add the host name and there branches...`
 #for example:
 
-`:wq!` --> used to exit from text editor..
-`ansible all --list-hosts` --> used to list all the hosts present in hosts file..
-`ansible ungrouped --list-hosts` --> used to show ungrouped host present in hosts file..
-`ansible -inventory --graph` --> used show all the hosts with their branches present in the host file..
+1) `:wq!` --> used to exit from text editor..
+2) `ansible all --list-hosts` --> used to list all the hosts present in hosts file..
+3) `ansible ungrouped --list-hosts` --> used to show ungrouped host present in hosts file..
+4) `ansible -inventory --graph` --> used show all the hosts with their branches present in the host file..
+
+In Ansible we have:-
+1) Modulus - python language
+2) ansible-doc `ansible-doc -l`
+3) ping module --> checks the ability of ansible to log in and that a usable py is configured.
+4) `ansible-user module -create delete/modify`
+
